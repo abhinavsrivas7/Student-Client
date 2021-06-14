@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="assets/registration-scripts.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/registration-styles.css">
+    </head>
+    <body>
+        <h3>Student Registration Form Using Tables In HTML</h3>
+        <div id="main" class="jumbotron">
+            <table id="form">
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input id="FirstName" type="text" class="form-control" maxlength="50">
+                        <p id="MessageFirstName" class="message">(Max 50 characters allowed)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        <input id="LastName" type="text" class="form-control" maxlength="50">
+                        <p id="MessageLastName" class="message">(Max 50 characters allowed)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td><input id="Email" type="email" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td>
+                        <input id="Mobile" maxlength="10" onkeypress="return restrictAlphabets(event)" class="form-control">
+                        <p class="message">(10 digits allowed)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input id="Male" value="male" checked type="radio" name="Gender">&nbsp;&nbsp;Male&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input id="Female" value="female" type="radio" name="Gender">&nbsp;&nbsp;Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth(DOB)</td>
+                    <td>
+                        <select id="Day">
+                        </select>
+                        <select id="Month">
+                        </select>
+                        <select id="Year">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><textarea id="Address" rows="5" class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <input id="City" maxlength="50" type="text" class="form-control">
+                        <p class="message">(Max 50 characters allowed)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pincode</td>
+                    <td>
+                        <input id="Pincode" maxlength="6" onkeypress="return restrictAlphabets(event)" class="form-control">
+                        <p class="message">(6 digits allowed)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>
+                        <input id="State" maxlength="50" type="text" class="form-control">
+                        <p class="message">(Max 50 characters allowed)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td><input id="Country" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td>
+                        <input type="checkbox" id="Drawing">&nbsp;&nbsp;Drawing&nbsp;&nbsp;
+                        <input type="checkbox" id="Singing">&nbsp;&nbsp;Singing&nbsp;&nbsp;
+                        <input type="checkbox" id="Dancing">&nbsp;&nbsp;Dancing&nbsp;&nbsp;
+                        <input type="checkbox" id="Sketching">&nbsp;&nbsp;Sketching<br>
+                        <input type="checkbox" id="Others" style="display: inline-block;">&nbsp;&nbsp;Others&nbsp;&nbsp;
+                        <input id="OthersText" maxlength="50" placeholder="Ex- Teaching" type="text" class="form-control" >
+                        <p class="message" style="display: inline-block;">(Max 50 characters allowed)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Qualifications</td>
+                    <td>
+                        <input type="checkbox" id="10">&nbsp;&nbsp;High School(10th)<br>
+                        <input type="checkbox" id="12">&nbsp;&nbsp;Higher School(12th)<br>
+                        <input type="checkbox" id="Graduate">&nbsp;&nbsp;Graduation(Bachelors)<br>
+                        <input type="checkbox" id="PostGraduate">&nbsp;&nbsp;Post Graduation(Masters)<br>
+                        <input type="checkbox" id="PhD">&nbsp;&nbsp;Ph.D
+                    </td>
+                </tr>
+                <tr>
+                    <td>Courses</td>
+                    <td>
+                        <input type="checkbox" id="BCA">&nbsp;&nbsp;BCA(Bachelor of Computer Applications)<br>
+                        <input type="checkbox" id="BCOM">&nbsp;&nbsp;B.Com(Bachelor of Commerce)<br>
+                        <input type="checkbox" id="BSC">&nbsp;&nbsp;B.Sc(Bachelor of Science)<br>
+                        <input type="checkbox" id="BA">&nbsp;&nbsp;BA(Bachelor of Arts)<br>
+                        <input type="checkbox" id="MCA">&nbsp;&nbsp;MCA(Master of Computer Applications)<br>
+                        <input type="checkbox" id="MCOM">&nbsp;&nbsp;M.Com(Master of Commerce)<br>
+                        <input type="checkbox" id="MSC">&nbsp;&nbsp;M.Sc(Master of Science)<br>
+                        <input type="checkbox" id="MA">&nbsp;&nbsp;MA(Master of Arts)
+                    </td>
+                </tr>
+            </table>
+            <div id="actions">
+                <button class="btn btn-dark" id="submit" onclick="submitHandler()">Submit</button>
+                <button class="btn btn-dark" id="reset" onclick="resetHandler()">Reset</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+body{
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("body-bg.jpg");
+}
+
+h3{
+    background-color: azure;
+    text-align: center;
+    margin-top: 10%;
+    color: blue;
+    font-weight: bolder;
+    width: 60%; 
+    margin-left: 20%; 
+    margin-right: 20%; 
+    margin-bottom: 0%;
+}
+
+#main{
+    width: 60%; 
+    margin-top: 0%;
+    margin-left: 20%; 
+    margin-right: 20%; 
+    margin-bottom: 10%;
+    background-image: linear-gradient(rgb(126, 126, 236), fuchsia);
+}
+
+#form{
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+.message{
+    font-size: small;
+}
+
+#actions{
+    width: 40%;
+    margin-left: 35%;
+    margin-right: 30%;
+    margin-top: 10%;
+}
+
+#OthersText{
+    width: 200px;
+    display: inline-block;
+    height: 25px; 
+    margin-top: 5px
+}
